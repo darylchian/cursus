@@ -6,7 +6,7 @@
 #    By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/04 13:23:28 by tchian            #+#    #+#              #
-#    Updated: 2026/10/11 12:34:57 by tchian           ###   ########.fr        #
+#    Updated: 2026/10/11 16:07:37 by tchian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
+AR = ar
+ARFLAGS = rcs
 RM = rm -f
 
 SRCS =	ft_isalpha.c \
@@ -66,7 +67,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 %.o: %.c libft.h
 		$(CC) $(CFLAGS) -c $< -o $@
