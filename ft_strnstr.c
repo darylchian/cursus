@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:17:13 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/08 20:22:34 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/11 15:04:08 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (*little == '\0')
 		return ((char *) big);
 	i = 0;
-		while (big[i] != '\0' && i < len)
+	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
 		while (little[j] != '\0'

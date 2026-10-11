@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:17:13 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/08 10:59:52 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/11 14:49:58 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,16 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joined_str;
-	size_t	len1;
-	size_t	len2;
-	size_t	i;
-	size_t	j;
+	size_t	total_len;
 
 	if (!s1 || !s2)
 		return (NULL);
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	joined_str = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	total_len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	joined_str = (char *)malloc(total_len * sizeof(char));
 	if (joined_str == NULL)
 		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		joined_str[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		joined_str[i + j] = s2[j];
-		j++;
-	}
-	joined_str[i + j] = '\0';
+	ft_strlcpy(joined_str, s1, total_len);
+	ft_strlcat(joined_str, s2, total_len);
 	return (joined_str);
 }
 //cant use (A || B == NULL)

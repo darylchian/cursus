@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:17:13 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/08 19:58:19 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/11 14:07:19 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	ft_free_result(char **result, size_t count)
 	i = 0;
 	while (i < count)
 	{
-		free (result[i]);
+		free(result[i]);
 		i++;
 	}
 	free (result);
@@ -63,10 +63,10 @@ static int	ft_fill_result(char **result, char const *s, char c)
 			i++;
 		if (start < i)
 		{
-		result[j] = ft_substr(s, start, i - start);
-		if (!result [j])
-			return (j);
-		j++;
+			result[j] = ft_substr(s, start, i - start);
+			if (!result[j])
+				return (j);
+			j++;
 		}
 	}
 	result[j] = NULL;
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	result = malloc ((ft_count_words(s, c) + 1) * sizeof(char *));
+	result = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	count = ft_fill_result(result, s, c);
