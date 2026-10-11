@@ -6,18 +6,24 @@
 #    By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/04 13:23:28 by tchian            #+#    #+#              #
-#    Updated: 2026/10/11 16:07:37 by tchian           ###   ########.fr        #
+#    Updated: 2026/10/11 21:08:26 by tchian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
+# Compiler and Flags
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+
+# Archiver and Flags (The Linking Engine)
 AR = ar
 ARFLAGS = rcs
+
+# Cleanup Command
 RM = rm -f
 
+# Source Files
 SRCS =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -62,16 +68,21 @@ SRCS =	ft_isalpha.c \
 		ft_lstiter.c \
 		ft_lstmap.c
 
+# Object Files Translation
 OBJS = $(SRCS:.c=.o)
 
+# Default Rule
 all: $(NAME)
 
+# Linking Rule: Bundles .o files into libft.a
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
+# Implicit rule to compile .c files into .o files
 %.o: %.c libft.h
 		$(CC) $(CFLAGS) -c $< -o $@
 
+# Cleanup Rules
 clean:
 	$(RM) $(OBJS)
 
@@ -80,4 +91,5 @@ fclean: clean
 
 re: fclean all
 
+# Protect rule names from matching actual files
 .PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:17:13 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/04 12:18:45 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/11 17:04:23 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,8 @@ int	ft_atoi(const char *nptr)
 		//multiplies previous digits by 10 to shift left, for new digit
 
 			//Deliver final math value adjusted by positive or negative sign
+////3 steps
+//purpose turn text to real math number
+//jump over spaces and tabs (horizontal tab 9 to carriage 13 and space 32)
+//check sign + or -
+//convert digits, accumulate number until non digit appears

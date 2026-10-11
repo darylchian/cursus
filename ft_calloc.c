@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 20:37:04 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/11 13:33:41 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/11 22:19:50 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	*ft_calloc(size_t count, size_t size)
 
 		//Step2: math calculator
 
-	// land grab malloc space
 	//if no *allocated, want to hook up tracking variable
 	//to fresh block of memory from malloc.
 	//if yes with*allocated read/overwrite the actual characters/numbers
