@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 20:37:04 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/08 22:47:05 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/11 13:32:11 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 	void	*new_content;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	new_list = NULL;
 	while (lst)

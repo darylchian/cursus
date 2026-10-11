@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 20:37:04 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/06 20:10:07 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/11 13:33:41 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,7 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*result;
 	size_t	total;
 
-	if (count == 0 || size == 0)
-	{
-		count = 1; 
-		size = 0;
-	}
-
-	if (count > (size_t)-1 / size)
+	if (size != 0 && count > (size_t)-1 / size)
 		return (NULL);
 	total = count * size;
 	result = malloc(total);
