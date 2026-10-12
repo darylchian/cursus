@@ -10,7 +10,7 @@
 
 The goal of `libft` is to build a solid foundational library from scratch without relying on standard C library functions. By implementing these primitives manually, this project provides a deep, low-level understanding of memory allocation, pointer arithmetic, buffer handling, and dynamic data structures.
 
-Once compiled, `libft.a` serves as a reusable static library across subsequent projects in the 42 curriculum (such as `get_next_line`, `ft_printf`, `push_swap`, and `minishell`).
+Once compiled, `libft.a` serves as a reusable static library across subsequent projects in the 42 curriculum (such as `get_next_line`, `ft_printf`, `push_swap`).
 
 ---
 
