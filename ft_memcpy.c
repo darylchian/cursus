@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:17:13 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/11 14:01:34 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/16 13:21:14 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	if (!dst && !src)
 		return (NULL);
-	d = dst;
-	s = src;
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
