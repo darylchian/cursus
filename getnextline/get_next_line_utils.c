@@ -50,6 +50,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	i;
 	size_t	j;
 
+	if (ft_strlen(s1) > (size_t)-1 - ft_strlen(s2) - 1)
+		return (NULL);
 	joined = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!joined)
 		return (NULL);

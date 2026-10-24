@@ -12,13 +12,34 @@
 
 #include "get_next_line.h"
 
-ssize_t read(int fd, void *buf, size_t count)
-
 char	*get_next_line(int fd)
 {
-	static char	*saved;
-	char		*buffer;
-	char		*line;
+	static char	*stash;
+	char		buffer[BUFFER_SIZE + 1];
+	ssize_t		bytes_read;
+	char		*tmp;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	
+	bytes_read = 1;
+	while (bytes_read > 0 && !ft_strchr(stash, '\n'))
+	{
+		bytes_read = read(fd, buffer, BUFFER_SIZE)
+		if (bytes_read == -1)
+		{
+			free(stash);
+			stash = NULL;
+			return = (NULL);
+		}
+		buffer[bytes_read] = '\0';
+		tmp = ft_strjoin(stash, buffer);
+		free(stash);
+		stash = tmp; 
+		if (!stash)
+			return (NULL); 
+	}
+	return (stash);
 
 	(void)saved;
 	(void)buffer;
@@ -26,9 +47,13 @@ char	*get_next_line(int fd)
 	return (NULL);
 
 
-bytes_read = read(fd, buffer, BUFFER_SIZE)
-
+bytes_read = read(fd, buffer, BUFFER_SIZE);
+{}
 }
+ssize_t read(int fd, void *buf, size_t count)
+
+
+static char *stash
 
 reading loop
 
