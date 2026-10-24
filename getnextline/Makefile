@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/10/18 13:23:28 by tchian            #+#    #+#              #
-#    Updated: 2026/10/11 21:08:26 by tchian           ###   ########.fr        #
+#    Created: 2026/10/21 19:42:25 by tchian            #+#    #+#              #
+#    Updated: 2026/10/24 20:51:30 by tchian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ RM = rm -f
 # Source Files
 SRCS =	get_next_line.c \
 		get_next_line_utils.c \
-			
+
 # Object Files Translation
 OBJS = $(SRCS:.c=.o)
 

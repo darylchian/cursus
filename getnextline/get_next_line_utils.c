@@ -6,7 +6,7 @@
 /*   By: tchian <tchian@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 21:17:13 by tchian            #+#    #+#             */
-/*   Updated: 2026/10/21 22:51:19 by tchian           ###   ########.fr       */
+/*   Updated: 2026/10/24 23:03:35 by tchian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	i;
 	size_t	j;
 
-	if (ft_strlen(s1) > (size_t)-1 - ft_strlen(s2) - 1)
-		return (NULL);
 	joined = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!joined)
 		return (NULL);
@@ -71,3 +69,22 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	return (joined);
 }
 
+char	*ft_strdup(const char *s1)
+{
+	char	*copy;
+	size_t	len;
+	size_t	i;
+
+	len = ft_strlen(s1);
+	copy = malloc((len + 1) * sizeof(char));
+	if (copy == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		copy[i] = s1[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
+}
